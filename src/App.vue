@@ -1,6 +1,6 @@
 <template>
   <v-app top-toolbar>
-    <header v-show="header">
+    <header v-if="this.$route.name!='Login'">
       <v-card>
         <v-layout row wrap>
           <v-flex xs6 class="text-xs-left">
@@ -33,18 +33,25 @@
 </template>
 
 <script>
+  import _ from 'lodash'
   export default {
     name: 'app',
     data () {
       return {
-        header: true,
-        project: 'SkyForm',
-        greeting: {'text': 'Привет,', 'name': 'Гость'},
-        menu: [
-          {'title': 'Профиль'},
-          {'title': 'Выход'}
-        ]
+        'project': '',
+        'greeting': {'text': '', 'name': ''},
+        'menu': []
       }
+    },
+    mounted () {
+      console.log(this.$route.name)
+      if (this.$route.name === 'Login') return
+      this.$nextTick(function () {
+        this.$http.get('/static/header.json').then(response => {
+          if (_.isEmpty(response.body)) document.router.push('Login')
+          _.extend(this.$data, response.body)
+        })
+      })
     }
   }
 </script>
