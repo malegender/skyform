@@ -1,6 +1,6 @@
 <template>
   <v-layout row wrap>
-    <v-flex xs9 sm8 lg11>
+    <v-flex xs9 sm8 lg10>
       <v-text-field v-for="(item, index) in inputs"
                     :label="item.label"
                     v-model="item.model"
@@ -8,7 +8,7 @@
                     :required="item.required"
       ></v-text-field>
     </v-flex>
-    <v-flex xs3 sm4 lg1 text-xs-center>
+    <v-flex xs3 sm4 lg2 text-xs-center>
       <v-btn floating small dark primary @click.native="addFieldText" class="mt-4 btn-center">
         <v-icon light>add</v-icon>
       </v-btn>

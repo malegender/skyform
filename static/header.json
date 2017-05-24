@@ -1,3 +1,17 @@
 {
-
+  "header": true,
+  "project": "SkyForm",
+  "greeting": {"text": "Привет, ", "name": "Гость"},
+  "menu": [
+    {"title": "Профиль"},
+    {"title": "Выход"}
+  ],
+ "languages": {
+   "label": "Язык",
+   "values": [
+     {"value": "ru-ru", "name": "Русский"},
+     {"value": "en-en", "name": "English"}
+   ],
+   "model": "ru-ru"
+ }
 }

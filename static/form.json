@@ -1,0 +1,46 @@
+{
+	"selectForm": {
+	  "label": "Выбрать",
+	  "values": [
+	    {"name": "Новая форма", "id": ""},
+	    {"name": "Заказ звонка", "id": "skcallme"},
+	    {"name": "Контакты", "id": "skfeedback"}
+	  ],
+	  "model": ""
+	},
+	"settingsForm": {
+	  "id": {"label": "Символьный код", "model": ""},
+      "name": {"label": "Название", "model": ""},
+	  "description": {"label": "Описание", "model": ""},
+	  "charset": {"label": "Кодировка", "model": "utf-8"},
+      "validation": {
+        "html5": {"label": "Валидация HTML5", "model": false},
+        "min_length": {"label": "Min количество символов", "model": 3},
+        "text_error": {"label": "Общий текст ошибки", "model": "Поля заполнены некорректно!"}
+      },
+      "smtp": {
+        "on": {"label": "Использовать SMTP", "model": false},
+        "host": {"label": "Сервер исходящей почты", "model": ""},
+        "secure": {"label": "Протокол шифрования", "model": "ssl"},
+        "port": {"label": "Порт", "model": 465},
+        "auth": {"label": "Аутентификация", "model": true},
+        "username": {"label": "Имя пользователя", "model": ""},
+        "password": {"label": "Пароль", "model": "", "visibility": false}
+      },
+      "subject": {"label": "Тема письма", "model": ""},
+	  "mail_to": {
+	    "more_label": "Дополнительный адрес почты",
+	    "fields": [
+	      {"label": "Адрес получателя", "model": "", "required": true}
+	    ]
+	  },
+	  "mail_cc": {
+        "more_label": "Дополнительный адрес почты",
+	    "fields": [
+	      {"label": "Адрес копии письма", "model": "", "required": false}
+	    ]
+	  },
+      "mail_from_name": {"label": "Имя отправителя", "model": ""},
+      "reverse_email": {"label": "Уведомление пользователя", "model": false}
+	}
+}
