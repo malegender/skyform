@@ -1,7 +1,7 @@
 <template>
   <v-layout row justify-center>
     <v-dialog v-model="dialog" fullscreen transition="v-dialog-bottom-transition" :overlay=false>
-      <v-btn primary light slot="activator">Open Dialog</v-btn>
+      <v-btn primary light slot="activator">Поля формы</v-btn>
       <v-card>
         <v-card-row>
           <v-toolbar>

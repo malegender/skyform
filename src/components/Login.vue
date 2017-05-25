@@ -17,8 +17,10 @@
             <v-text-field
                 :label="password.label"
                 v-model="password.model"
+                :append-icon="password.visibility ? 'visibility' : 'visibility_off'"
+                :append-icon-cb="() => (password.visibility = !password.visibility)"
+                :type="!password.visibility ? 'password' : 'text'"
                 min="6"
-                type="password"
                 :rules="password.rules"
             ></v-text-field>
             <v-layout row wrap>
@@ -59,6 +61,7 @@
           'label': 'Пароль',
           'model': '',
           'rules': [],
+          'visibility': false,
           'error': 'Пароль должен содержать не менее 6 символов'
         },
         cms: {

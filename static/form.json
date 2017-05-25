@@ -2,9 +2,9 @@
 	"selectForm": {
 	  "label": "Выбрать",
 	  "values": [
-	    {"name": "Новая форма", "id": ""},
-	    {"name": "Заказ звонка", "id": "skcallme"},
-	    {"name": "Контакты", "id": "skfeedback"}
+	    {"name": "Новая форма", "value": ""},
+	    {"name": "Заказ звонка", "value": "skcallme"},
+	    {"name": "Контакты", "value": "skfeedback"}
 	  ],
 	  "model": ""
 	},
@@ -41,6 +41,15 @@
 	    ]
 	  },
       "mail_from_name": {"label": "Имя отправителя", "model": ""},
-      "reverse_email": {"label": "Уведомление пользователя", "model": false}
+      "reverse_email": {"label": "Уведомление пользователя", "model": false},
+      "reverse_email_field": {"label": "Имя поля содержащее E-mail пользователя", "model": ""},
+	  "action": {
+        "label": "Действие",
+        "values": [
+          {"name": "Отправка письма", "value": "send"},
+          {"name": "Запись в БД", "value": "db"}
+        ],
+        "model": "send"
+      }
 	}
 }
