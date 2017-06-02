@@ -28,7 +28,7 @@
               </v-flex>
               <v-flex xs12 sm3 class="pa-0 text-xs-center">
                 <v-menu offset-y>
-                  <img :src="languageSrc" slot="activator" class="mt-2" >
+                  <img :src="languageSrc" slot="activator">
                   <v-list>
                     <v-list-item v-for="item in languages.values" @click="selectLanguage(item.value)" :key="item.value">
                       <v-list-tile>

@@ -132,7 +132,6 @@
     name: 'main',
     data () {
       return {
-        e1: true,
         selectForm: {
           'label': '',
           'values': [],

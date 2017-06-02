@@ -12,7 +12,7 @@ $theme := {
 
 header
   > .card
-    height: 50px !important
+    height: 56px !important
     .layout
       width: 100%
       .logo
@@ -26,11 +26,13 @@ header
           text-transform: none
       .menu-languages
         .subheader
-          margin-top: 0.1em
+          margin-top: 0.4em
           justify-content: flex-end
         .menu
           width: 100%
           text-align center
+          img
+            margin-top: 0.8em
 .btn--floating.btn--small
   padding: 0
 .btn-center
@@ -52,7 +54,35 @@ header
   .form-description
     textarea
       min-height: 100px
+#form-content
+  padding: 0 15px
+  .wrap-content
+    padding: 10px !important;
+    border: 1px solid #ccc;
+    .sort-block
+      padding: 15px 20px
+      margin-top: 10px
+      min-height: 50px
+      border: 1px dashed #cccccc;
+      background: whitesmoke linear-gradient(#f4f4f4, #f1f1f1);
+      div
+        span
+          display: block
+          min-height: 20px
+      &:first-child {
+        margin-top: 0
+      }
+    .sort-field
+      padding: 0 20px
+      margin-top: 10px
+      height: 55px !important
 @media only screen and (max-width: 599px)
+  .dialog__content
+    .dialog--active
+      width: 100% !important
   .menu-login
     .icon
       margin-right: 0 !important
+  #form-content
+    .wrap-content
+      padding: 10px !important
