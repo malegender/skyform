@@ -69,13 +69,77 @@ header
         span
           display: block
           min-height: 20px
-      &:first-child {
+      &:first-child
         margin-top: 0
-      }
     .sort-field
       padding: 0 20px
       margin-top: 10px
-      height: 55px !important
+      min-height: 55px
+      position: relative
+      .block-buttons
+        position: absolute
+        width: 100%;
+        right: 0;
+        top: 50%
+        margin-top: -27.5px
+      label
+        display: block
+        margin: 5px 0 0
+      input,
+      textarea,
+      select,
+      pre
+        border: 1px solid #cccccc
+        border-radius: 3px
+        width: 100%
+        color: #000 !important
+      input,
+      select
+        height: 30px
+        padding: 0 5px
+        margin: 12.5px 0
+        &.label
+          margin: 5px 0 10px
+        &.error-text
+          margin: 15px 0 5px
+          &.label
+            margin: 5px 0
+      input[type="checkbox"],
+      input[type="radio"]
+        width: 20px
+        height: 20px
+        float: left
+        margin-top: 17.5px
+      pre,
+      textarea
+        height: 45px
+        padding: 0 5px
+        margin: 10px 0 5px
+        resize: none
+        &.label
+          margin: 5px 0 5px
+        &.error-text
+          margin: 15px 0 0
+          &.label
+            margin: 5px 0 0
+      pre
+        border-left: 4px solid #81C784;
+        border-top-left-radius: 0
+        border-bottom-left-radius: 0
+        margin-bottom: 10px
+      select
+        -moz-appearance: menulist
+        -webkit-appearance: menulist
+        height: 35px
+        margin: 12.5px 0
+        padding: 0 5px
+      .error-text
+        margin: 0 0 5px;
+        color: red;
+        &.cross:before
+          content: 'x'
+          margin-right: 5px
+          font-weight: bold
 @media only screen and (max-width: 599px)
   .dialog__content
     .dialog--active
@@ -86,3 +150,8 @@ header
   #form-content
     .wrap-content
       padding: 10px !important
+      .sort-field
+        .block-buttons
+          position: static
+          margin-top 0 !important
+          text-align: center !important
